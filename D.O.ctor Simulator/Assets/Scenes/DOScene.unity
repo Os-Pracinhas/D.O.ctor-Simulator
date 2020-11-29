@@ -404,6 +404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: InputField_DO_Name_E
       objectReference: {fileID: 0}
+    - target: {fileID: 3715048707800540341, guid: 97ca106d2e9662043b38894eb9acca46,
+        type: 3}
+      propertyPath: m_Text
+      value: Causa F
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ca106d2e9662043b38894eb9acca46, type: 3}
 --- !u!224 &182030119 stripped
@@ -784,6 +789,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: InputField_DO_Name_D
       objectReference: {fileID: 0}
+    - target: {fileID: 3715048707800540341, guid: 97ca106d2e9662043b38894eb9acca46,
+        type: 3}
+      propertyPath: m_Text
+      value: Causa D
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ca106d2e9662043b38894eb9acca46, type: 3}
 --- !u!1001 &754696600
@@ -902,6 +912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InputField_DO_Name_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715048707800540341, guid: 97ca106d2e9662043b38894eb9acca46,
+        type: 3}
+      propertyPath: m_Text
+      value: Causa B
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ca106d2e9662043b38894eb9acca46, type: 3}
@@ -2409,6 +2424,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: InputField_DO_Name_F
       objectReference: {fileID: 0}
+    - target: {fileID: 3715048707800540341, guid: 97ca106d2e9662043b38894eb9acca46,
+        type: 3}
+      propertyPath: m_Text
+      value: Causa G
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ca106d2e9662043b38894eb9acca46, type: 3}
 --- !u!1001 &1591834061
@@ -3142,6 +3162,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: InputField_DO_Name_C
       objectReference: {fileID: 0}
+    - target: {fileID: 3715048707800540341, guid: 97ca106d2e9662043b38894eb9acca46,
+        type: 3}
+      propertyPath: m_Text
+      value: Causa C
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ca106d2e9662043b38894eb9acca46, type: 3}
 --- !u!1 &1922096987
@@ -3517,7 +3542,7 @@ PrefabInstance:
     - target: {fileID: 2766580216541146360, guid: 5758d2482a932a44581195b9dd818c0a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 198
+      value: 198.8
       objectReference: {fileID: 0}
     - target: {fileID: 2766580216541146360, guid: 5758d2482a932a44581195b9dd818c0a,
         type: 3}
@@ -3527,7 +3552,7 @@ PrefabInstance:
     - target: {fileID: 2766580216541146360, guid: 5758d2482a932a44581195b9dd818c0a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 36.96
       objectReference: {fileID: 0}
     - target: {fileID: 2766580216541146360, guid: 5758d2482a932a44581195b9dd818c0a,
         type: 3}
@@ -3682,6 +3707,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InputField_DO_Name_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715048707800540341, guid: 97ca106d2e9662043b38894eb9acca46,
+        type: 3}
+      propertyPath: m_Text
+      value: Causa A
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ca106d2e9662043b38894eb9acca46, type: 3}
