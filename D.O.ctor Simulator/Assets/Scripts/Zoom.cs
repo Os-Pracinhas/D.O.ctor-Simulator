@@ -13,7 +13,9 @@ public class Zoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetAxis("Mouse ScrollWheel") > 0f){
+            
+        }
     }
 
     
