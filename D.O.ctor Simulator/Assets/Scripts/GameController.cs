@@ -6,27 +6,53 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject nameDr;
+    public static GameController instance = null;
+
+    public GameObject OpenWindowNameDr;
     private string sceneName;
     public int numCaso;
 
+    public GameObject pageHome;
+    public GameObject pageLoad;
+    public GameObject pageLoadLevel;
+    public GameObject pageOptions;
+
+
+
     void Start()
     {
-        
+        if (instance == null) { instance = this; }
+        else if (instance != this) { Destroy(gameObject); }
+        DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
     void Update(){
         
     }
 
     public void SetNewMed()
     {
-        nameDr.SetActive(true);
+        OpenWindowNameDr.SetActive(true);
+    }
+
+    public void FecharBg()
+    {
+        OpenWindowNameDr.SetActive(false);
     }
 
     public void LoadGameDoScene(int i){
-        SceneManager.LoadScene("GameDoScene");
+        SceneManager.LoadScene("Scene_GameDO");
         numCaso = i;
+    }
+
+    public void GetMed()
+    {
+        pageHome.SetActive(false);
+        pageLoad.SetActive(true);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
