@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public void SavePlayer(Text n){
         name = n.text;
         SaveSystem.SavePlayer(this);
-        FindObjectOfType<GameController>().LoadGameDoScene();
+        FindObjectOfType<GameController>().LoadGameDoScene(1);
     }
 
     public void LoadPlayer(){

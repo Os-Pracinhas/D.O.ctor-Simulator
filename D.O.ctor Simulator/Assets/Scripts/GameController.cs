@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
 {
     public GameObject nameDr;
     private string sceneName;
+    public int numCaso;
+
     void Start()
     {
         
@@ -23,7 +25,8 @@ public class GameController : MonoBehaviour
         nameDr.SetActive(true);
     }
 
-    public void LoadGameDoScene(){
+    public void LoadGameDoScene(int i){
         SceneManager.LoadScene("GameDoScene");
+        numCaso = i;
     }
 }
