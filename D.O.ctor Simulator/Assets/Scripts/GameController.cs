@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public static GameController instance = null;
-
     public GameObject OpenWindowNameDr;
     private string sceneName;
     public int numCaso;
@@ -54,10 +53,15 @@ public class GameController : MonoBehaviour
         Debug.Log(FindObjectOfType<Player>().name);
     }
 
-    public void VoltarHome(){
+    public void VoltarHome()
+    {
         pageLoad.SetActive(false);
         pageHome.SetActive(true);
-        
+    }
+    public void VoltarLoad()
+    {
+        pageLoadLevel.SetActive(false);
+        pageLoad.SetActive(true);
     }
 
     public void ExitGame()
@@ -65,7 +69,7 @@ public class GameController : MonoBehaviour
         Application.Quit();
     }
 
-    public void setSelecionarNivel(PlayerData pla){
+    public void SetSelecionarNivel(PlayerData pla){
         pageLoadLevel.SetActive(true);
         pageLoad.SetActive(false);
         if(!pla.caso2){
@@ -75,7 +79,7 @@ public class GameController : MonoBehaviour
         if(!pla.caso3)pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
     }
 
-    public void getBackCarregarJogo(){
+    public void GetBackCarregarJogo(){
         pageLoadLevel.SetActive(false);
         pageLoad.SetActive(true);
     }

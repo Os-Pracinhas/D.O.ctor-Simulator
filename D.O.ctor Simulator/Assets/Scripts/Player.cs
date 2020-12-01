@@ -53,6 +53,6 @@ public class Player : MonoBehaviour
         caso2 = pla.caso2;
         caso3 = pla.caso3;
         name = n;
-        FindObjectOfType<GameController>().setSelecionarNivel(pla);
+        FindObjectOfType<GameController>().SetSelecionarNivel(pla);
     }
 }
