@@ -18,7 +18,6 @@ public class GameController : MonoBehaviour
     public GameObject pageOptions;
 
 
-
     void Start()
     {
         if (instance == null) { instance = this; }
@@ -41,18 +40,43 @@ public class GameController : MonoBehaviour
     }
 
     public void LoadGameDoScene(int i){
-        SceneManager.LoadScene("Scene_GameDO");
         numCaso = i;
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<NCaso>().SaveCaso();
+        // SceneManager.LoadScene("Scene_GameDO");
     }
 
-    public void GetMed()
+    public void GetMed(GameObject content)
     {
         pageHome.SetActive(false);
         pageLoad.SetActive(true);
+
+        FindObjectOfType<Player>().LoadPlayers(content);
+        Debug.Log(FindObjectOfType<Player>().name);
+    }
+
+    public void VoltarHome(){
+        pageLoad.SetActive(false);
+        pageHome.SetActive(true);
+        
     }
 
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void setSelecionarNivel(PlayerData pla){
+        pageLoadLevel.SetActive(true);
+        pageLoad.SetActive(false);
+        if(!pla.caso2){
+            pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(1).gameObject.SetActive(false);
+            pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
+        }
+        if(!pla.caso3)pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
+    }
+
+    public void getBackCarregarJogo(){
+        pageLoadLevel.SetActive(false);
+        pageLoad.SetActive(true);
     }
 }
