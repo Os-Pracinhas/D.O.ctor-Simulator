@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour
     public void LoadGameDoScene(int i){
         numCaso = i;
         GameObject.FindGameObjectWithTag("GameController").GetComponent<NCaso>().SaveCaso();
-        // SceneManager.LoadScene("Scene_GameDO");
+        SceneManager.LoadScene("Scene_GameDO");
     }
 
     public void GetMed(GameObject content)
