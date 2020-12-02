@@ -13,12 +13,10 @@ public class NCaso : MonoBehaviour
     private string arquivo;
     public Caso LoadCaso(int i){
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath+"/casos/caso"+i+1+".fun";
-        FileStream stream = new FileStream(path, FileMode.Create);
+        string path = Application.persistentDataPath+"/casos/caso"+(i+1)+".fun";
+        FileStream stream = new FileStream(path, FileMode.Open);
 
-        Caso data = new Caso();
-
-        // data[i] = formatter.Deserialize(stream) as Caso;
+        Caso data = formatter.Deserialize(stream) as Caso;
         stream.Close();
         return data;
     }

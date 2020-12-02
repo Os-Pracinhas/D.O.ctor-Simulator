@@ -17,6 +17,14 @@ public class Validate : MonoBehaviour
             dr[i] = n.transform.GetChild(i).gameObject.GetComponent<Dropdown>().value+" "+t.transform.GetChild(i).gameObject.GetComponent<Dropdown>().options[t.transform.GetChild(i).gameObject.GetComponent<Dropdown>().value].text;
             inputs[i] = ip.transform.GetChild(i).gameObject.GetComponent<InputField>();
         }
-        // Debug.Log(n);
+        if(FindObjectOfType<GameController>().numCaso == 1){
+
+        }
+        else if(FindObjectOfType<GameController>().numCaso == 2){
+
+        }
+        else{
+
+        }
     }
 }
