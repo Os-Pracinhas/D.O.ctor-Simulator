@@ -17,7 +17,6 @@ public class NCaso : MonoBehaviour
         FileStream stream = new FileStream(path, FileMode.Open);
 
         Caso data = formatter.Deserialize(stream) as Caso;
-        
         stream.Close();
         return data;
     }
