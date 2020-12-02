@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene_GameDO.unity
     guid: a997c40d69dbb834c90eefbed7aa3df7
-  - enabled: 1
-    path: Assets/Scenes/Scene_Relato.unity
-    guid: aaf544d44a50923498f7163b841ae748
-  - enabled: 1
-    path: Assets/Scenes/Scene_DO.unity
-    guid: ae07ac2ff4702854d9807fd864b98df0
-  - enabled: 1
-    path: Assets/Scenes/Scene_CID.unity
-    guid: 9051e511b5517f04aa5204a332140840
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
