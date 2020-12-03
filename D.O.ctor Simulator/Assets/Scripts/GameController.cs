@@ -34,11 +34,6 @@ public class GameController : MonoBehaviour
         OpenWindowNameDr.SetActive(true);
     }
 
-    public void FecharBg()
-    {
-        OpenWindowNameDr.SetActive(false);
-    }
-
     public void LoadGameDoScene(int numCaso){
         SceneManager.LoadScene("Scene_GameDO");
         NCaso casos = new NCaso();
@@ -46,9 +41,15 @@ public class GameController : MonoBehaviour
         this.numCaso = numCaso;
     }
 
-    public void LoadSceneNivel()
+    public void LoadScenePosGaeDO()
+    {
+        SceneManager.LoadScene("Scene_PosGameDO");
+    }
+
+    public void LoadSceneHome()
     {
         SceneManager.LoadScene("Scene_Home");
+        
     }
 
     public void GetMed(GameObject content)
@@ -57,12 +58,6 @@ public class GameController : MonoBehaviour
         pageLoad.SetActive(true);
 
         FindObjectOfType<Player>().LoadPlayers(content);
-    }
-
-    public void VoltarHome()
-    {
-        pageLoad.SetActive(false);
-        pageHome.SetActive(true);
     }
     public void VoltarLoad()
     {

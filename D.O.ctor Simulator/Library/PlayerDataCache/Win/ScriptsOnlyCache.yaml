@@ -1,11 +1,19 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - FinishCase
     - GameController
+    - ListNumbers
     - NCaso
     - Player
+    - PosGame
+    - ScriptFecharCaso
+    - ScriptQuitGame
+    - SelecionarNivel
+    - SetButtons
+    - SetNameByCod
+    - SetRelato
     - Validate
-    - Zoom
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -42,6 +50,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
@@ -55,33 +65,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11234}
+      Script: {instanceID: 11292}
     - Class: 114
-      Script: {instanceID: 11254}
+      Script: {instanceID: 11324}
     - Class: 114
-      Script: {instanceID: 11342}
+      Script: {instanceID: 11384}
     - Class: 114
-      Script: {instanceID: 11424}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11470}
     - Class: 114
-      Script: {instanceID: 11688}
+      Script: {instanceID: 11508}
     - Class: 114
-      Script: {instanceID: 11768}
+      Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11818}
     - Class: 114
-      Script: {instanceID: 12062}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 12754}
+      Script: {instanceID: 11914}
     - Class: 114
-      Script: {instanceID: 13058}
+      Script: {instanceID: 12116}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 12258}
     - Class: 114
-      Script: {instanceID: 13106}
+      Script: {instanceID: 12512}
     - Class: 114
-      Script: {instanceID: 13118}
+      Script: {instanceID: 12820}
+    - Class: 114
+      Script: {instanceID: 13124}
+    - Class: 114
+      Script: {instanceID: 13146}
+    - Class: 114
+      Script: {instanceID: 13172}
+    - Class: 114
+      Script: {instanceID: 13184}
+    - Class: 114
+      Script: {instanceID: 89002}
+    - Class: 114
+      Script: {instanceID: 97602}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -122,31 +144,90 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11234}
+      Script: {instanceID: 11292}
     - Class: 114
-      Script: {instanceID: 11254}
-    - Class: 114
-      Script: {instanceID: 11342}
-    - Class: 114
-      Script: {instanceID: 11416}
-    - Class: 114
-      Script: {instanceID: 11424}
+      Script: {instanceID: 11384}
     - Class: 114
       Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11768}
+      Script: {instanceID: 11470}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11508}
     - Class: 114
-      Script: {instanceID: 12062}
+      Script: {instanceID: 11818}
     - Class: 114
-      Script: {instanceID: 12202}
+      Script: {instanceID: 11914}
     - Class: 114
-      Script: {instanceID: 12754}
+      Script: {instanceID: 12116}
     - Class: 114
-      Script: {instanceID: 12862}
+      Script: {instanceID: 12246}
     - Class: 114
-      Script: {instanceID: 13118}
+      Script: {instanceID: 12262}
+    - Class: 114
+      Script: {instanceID: 12512}
+    - Class: 114
+      Script: {instanceID: 12820}
+    - Class: 114
+      Script: {instanceID: 12928}
+    - Class: 114
+      Script: {instanceID: 13184}
+    - Class: 114
+      Script: {instanceID: 55890}
+    - Class: 114
+      Script: {instanceID: 106690}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Scene_PosGameDO.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11230}
+    - Class: 114
+      Script: {instanceID: 11232}
+    - Class: 114
+      Script: {instanceID: 11292}
+    - Class: 114
+      Script: {instanceID: 11508}
+    - Class: 114
+      Script: {instanceID: 11914}
+    - Class: 114
+      Script: {instanceID: 12246}
+    - Class: 114
+      Script: {instanceID: 12820}
+    - Class: 114
+      Script: {instanceID: 13184}
+    - Class: 114
+      Script: {instanceID: 43308}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -172,22 +253,16 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
-      Hash: aeb62f729c52c814dec86c47dcac1471
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
-  - hash:
-      serializedVersion: 2
       Hash: 5f1752ed2092162f016c19510c28a8b9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
+      Hash: aeb62f729c52c814dec86c47dcac1471
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
-    className: InputField
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -202,6 +277,12 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
+      Hash: 5d8c5031e03a8edc58fac63e82d42916
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SetRelato
+  - hash:
+      serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -214,10 +295,16 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: b0496ded117c1b8ca2a59eb37c65584c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Validate
+  - hash:
+      serializedVersion: 2
+      Hash: b7f0f655bcb1fc751047e3e8b66ffa4e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ListNumbers
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -244,7 +331,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: 218c2ae4e2f333da1ec12487a101dd4d
+      Hash: e293f27008464a2ff1f6fda38d84a36e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -340,12 +427,6 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Zoom
-  - hash:
-      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -356,6 +437,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 6246014521ae80b7224f6ec608527975
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SetNameByCod
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -418,6 +505,18 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: df83a71dffca43f69a88e84cda72c62e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SelecionarNivel
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FinishCase
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -440,6 +539,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: InputField
   - hash:
       serializedVersion: 2
       Hash: c9a8b80298a116835b51ba1cf9284367
@@ -478,6 +583,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 2ab7254c7aaaf5453bbb5e6617182e09
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: C2TDemo
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -508,7 +619,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: b5505d6ed932fc2784e4dd9b9418939b
+      Hash: 44bca96c903217046a52491f0e932ed1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -614,9 +725,34 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: b425e8df44b4025396889c04c9950ffe
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PosGame
+  - hash:
+      serializedVersion: 2
+      Hash: 03541bd9b75d37fb6dc03058b2a42b8d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SetButtons
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScriptFecharCaso
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScriptQuitGame
   platform: 5
   scenePathNames:
   - Assets/Scenes/Scene_Home.unity
   - Assets/Scenes/Scene_GameDO.unity
+  - Assets/Scenes/Scene_PosGameDO.unity
   playerPath: C:/Users/Usuario/Documents/GitHub/D.O.ctor-Simulator/D.O.ctor Simulator/Builds/D.O.ctor
     Simulator.exe

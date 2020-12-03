@@ -76,7 +76,6 @@ public static class SaveSystem
 
     public static void UpdatePlayer(Player player){
         DirectoryInfo d = new DirectoryInfo(Application.persistentDataPath);
-        string count = null;
 
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream stream;
