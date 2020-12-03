@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
 
     public void SalvarProg()
     {
-        SaveSystem.SavePlayer(this);
+        SaveSystem.UpdatePlayer(this);
     }
 
     public void LoadPlayers(GameObject content){

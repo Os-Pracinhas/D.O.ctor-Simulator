@@ -18,23 +18,23 @@ public class NCaso : MonoBehaviour
         Caso caso;
         string foto = Application.dataPath+"/casos/foto/pele.jpg";
         int numCaso = count;
-        string nome = "Carlos Alberto";
-        string idade = "58 anos";
+        string nome = "Arthur Costa da Silva";
+        string idade = "34 Anos";
         string sexo = "Masculino";
-        string relato = "Teve diarreia e morreu de hemorragia interna";
+        string relato = "O paciente chegou no hospital apresentando o quadro de febre alta, gripe, dores musculares e vômito a 5 dias, com todos os sintomas. Depois de um exame, fora descoberto que havia hemorragia interna. Mesmo que os medicos tivessem se apressando para a operação, Arthur morreu 30 minutos depois da chegada";
 
-        string respostaA = "A009";
-        string respostaB = "A010";
-        string respostaC = "A011";
-        string respostaD = "A012";
-        string respostaE = "A013";
-        string respostaF = "A014";
-        string tempoA = "5 Minutos";
-        string tempoB = "5 Minutos";
-        string tempoC = "5 Minutos";
-        string tempoD = "5 Minutos";
-        string tempoE = "5 Minutos";
-        string tempoF = "5 Minutos";
+        string respostaA = "R580";
+        string respostaB = "A910";
+        string respostaC = "";
+        string respostaD = "";
+        string respostaE = "J118";
+        string respostaF = "";
+        string tempoA = "30 Minutos";
+        string tempoB = "5 Dias";
+        string tempoC = "";
+        string tempoD = "";
+        string tempoE = "5 Dias";
+        string tempoF = "";
         if (count == 0)
         {
             caso = new Caso(foto, 1, nome, idade, sexo, relato, respostaA, respostaB, respostaC, respostaD, respostaE, respostaF, tempoA, tempoB, tempoC, tempoD, tempoE, tempoF);
@@ -51,6 +51,11 @@ public class NCaso : MonoBehaviour
         FileStream stream = new FileStream(path, FileMode.Create);
         formatter.Serialize(stream, casos);
         stream.Close();
+    }
+    public void GetTotal(){
+        List<Caso> casos = LoadCaso();
+        Debug.Log(casos.Count());
+
     }
     public List<Caso> LoadCaso(){
         BinaryFormatter formatter = new BinaryFormatter();

@@ -21,7 +21,7 @@ public class Validate : MonoBehaviour
         }
         Debug.Log(dr[0]);
         GameController gC = FindObjectOfType<GameController>();
-        if (gC.caso.respostaA == inputs[0].text && gC.caso.respostaB == inputs[1].text && gC.caso.respostaC == inputs[2].text && gC.caso.respostaD == inputs[3].text && gC.caso.respostaE == inputs[4].text && gC.caso.respostaF == inputs[5].text && gC.caso.tempoA == dr[0] && gC.caso.tempoB == dr[1] && gC.caso.tempoC == dr[2] && gC.caso.tempoD == dr[3] && gC.caso.tempoE == dr[4] && gC.caso.tempoF == dr[5])
+        if (gC.caso.respostaA == inputs[0].text && gC.caso.respostaB == inputs[1].text && gC.caso.respostaC == inputs[2].text && gC.caso.respostaD == inputs[3].text && ((gC.caso.respostaE == inputs[4].text && gC.caso.respostaF == inputs[5].text) || (gC.caso.respostaE == inputs[5].text && gC.caso.respostaF == inputs[4].text)) && gC.caso.tempoA == dr[0] && gC.caso.tempoB == dr[1] && gC.caso.tempoC == dr[2] && gC.caso.tempoD == dr[3] && ((gC.caso.tempoE == dr[4] && gC.caso.tempoF == dr[5]) || (gC.caso.tempoE == dr[5] && gC.caso.tempoF == dr[4])))
         {
             telaVitoria.SetActive(true);
         }

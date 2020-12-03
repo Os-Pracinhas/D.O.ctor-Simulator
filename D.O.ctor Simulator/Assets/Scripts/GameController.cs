@@ -43,6 +43,7 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("Scene_GameDO");
         NCaso casos = new NCaso();
         caso = casos.LoadCaso()[numCaso];
+        this.numCaso = numCaso;
     }
 
     public void LoadSceneNivel()

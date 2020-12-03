@@ -16,7 +16,8 @@ public class FinishCase : MonoBehaviour
 
     public void SceneSelectedNivel()
     {
-        player.caso2 = true;
+        if(gC.numCaso == 0) player.caso2 = true;
+        else if(gC.numCaso == 1)player.caso3 = true;
         player.SalvarProg();
         gC.LoadSceneNivel();
     }

@@ -30,13 +30,13 @@ public static class SaveSystem
         string path;
         BinaryFormatter formatter = new BinaryFormatter();
         PlayerData[] data = new PlayerData[files_tam];
-
+        FileStream stream;
         if(files_tam > 0){
             
             for (int i = 0; i < files_tam; i++)
             {
                 path = Application.persistentDataPath+"/player"+(i)+".fun";
-                FileStream stream = new FileStream(path, FileMode.Open);
+                stream = new FileStream(path, FileMode.Open);
                 data[i] = formatter.Deserialize(stream) as PlayerData;
                 stream.Close();
             }
@@ -72,5 +72,29 @@ public static class SaveSystem
         }
 
         return null;
+    }
+
+    public static void UpdatePlayer(Player player){
+        DirectoryInfo d = new DirectoryInfo(Application.persistentDataPath);
+        string count = null;
+
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream stream;
+        PlayerData data = new PlayerData(player); 
+        for (int i = 0; i < d.GetFiles().Length; i++)
+        {
+            string path = Application.persistentDataPath+"/player"+i+".fun";
+            stream = new FileStream(path, FileMode.Open);
+            
+            PlayerData newPlayer = formatter.Deserialize(stream) as PlayerData;
+            if(newPlayer.name == data.name){ 
+                stream.Close();               
+                FileStream stream1 = new FileStream(path, FileMode.Create);
+                formatter.Serialize(stream1, data);
+                stream1.Close();
+                break;
+            }
+            stream.Close();
+        }
     }
 }
