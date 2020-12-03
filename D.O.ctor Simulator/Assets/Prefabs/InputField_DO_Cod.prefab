@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.40000153, y: 0.42}
-  m_SizeDelta: {x: -7.235077, y: -7.0028343}
+  m_AnchoredPosition: {x: -0.0000076293945, y: -0.000019073486}
+  m_SizeDelta: {x: 0.000015258789, y: -0.000022888184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7849982033785223084
 CanvasRenderer:
@@ -71,7 +71,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 7849982035316862399}
   - component: {fileID: 7849982035316862403}
   - component: {fileID: 7849982035316862400}
+  - component: {fileID: 611952725}
   m_Layer: 5
   m_Name: InputField_DO_Cod
   m_TagString: Untagged
@@ -219,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -338,3 +339,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01283e83c15130444baa831a76123af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &611952725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849982035316862397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5530bb248353f6847bd5c045c9bab79f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  csv: {fileID: 4900000, guid: 02c366a9166a37a47be6141ed20b5c9f, type: 3}
+  cod: {fileID: 7849982035316862399}
+  nome: {fileID: 0}

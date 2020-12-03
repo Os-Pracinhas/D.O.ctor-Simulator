@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Dropdown
+  - pageRelato
+  - Selecionar_Nivel
   layers:
   - Default
   - TransparentFX

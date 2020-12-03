@@ -18,6 +18,6 @@ public class PlayerData
         caso1 = player.caso1;
         caso2 = player.caso2;
         caso3 = player.caso3;
-        this.name = player.name;
+        this.name = player.nome;
     }
 }

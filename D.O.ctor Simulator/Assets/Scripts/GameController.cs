@@ -16,71 +16,55 @@ public class GameController : MonoBehaviour
     public GameObject pageLoadLevel;
     public GameObject pageOptions;
 
+    Scene sce;
+
+    public Caso caso;
 
     void Start()
     {
         if (instance == null) { instance = this; }
         else if (instance != this) { Destroy(gameObject); }
         DontDestroyOnLoad(gameObject);
+        sce = SceneManager.GetActiveScene();
+
+        for(int i = 0; i < (sce.GetRootGameObjects() as GameObject[]).Length; i++){
+            Debug.Log((sce.GetRootGameObjects() as GameObject[])[2].gameObject.transform.GetChild(1).gameObject.transform.GetChild(0));
+        }
     }
 
     void Update(){
-        
+        if(Input.GetKeyDown("escape")){
+            Debug.Log("yes");
+        }
     }
 
-    public void SetNewMed()
-    {
-        OpenWindowNameDr.SetActive(true);
+    public void savecasoo(){
+        NCaso casos = new NCaso();
+        // casos.SaveCaso();
+        Debug.Log(casos.LoadCaso().Count);
     }
 
-    public void FecharBg()
-    {
-        OpenWindowNameDr.SetActive(false);
-    }
-
-    public void LoadGameDoScene(int i){
-        numCaso = i;
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<NCaso>().SaveCaso();
+    public void LoadGameDoScene(int numCaso){
         SceneManager.LoadScene("Scene_GameDO");
+        NCaso casos = new NCaso();
+        caso = casos.LoadCaso()[numCaso];
+        this.numCaso = numCaso;
     }
 
-    public void GetMed(GameObject content)
+    public void LoadSceneNivel()
     {
-        pageHome.SetActive(false);
-        pageLoad.SetActive(true);
-
-        FindObjectOfType<Player>().LoadPlayers(content);
-        Debug.Log(FindObjectOfType<Player>().name);
+        SceneManager.LoadScene("Scene_Home");
     }
 
-    public void VoltarHome()
-    {
-        pageLoad.SetActive(false);
-        pageHome.SetActive(true);
-    }
-    public void VoltarLoad()
-    {
-        pageLoadLevel.SetActive(false);
-        pageLoad.SetActive(true);
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
-
-    public void SetSelecionarNivel(PlayerData pla){
+    public void SetSelecionarNivel(PlayerData player){
+        sce = SceneManager.GetActiveScene();
+        GameObject pageLoadLevel = (sce.GetRootGameObjects() as GameObject[])[2].gameObject.transform.GetChild(1).gameObject.transform.GetChild(2).gameObject;
         pageLoadLevel.SetActive(true);
-        pageLoad.SetActive(false);
-        if(!pla.caso2){
+        (sce.GetRootGameObjects() as GameObject[])[2].gameObject.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        if(!player.caso2){
             pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(1).gameObject.SetActive(false);
             pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
         }
-        if(!pla.caso3)pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
-    }
-
-    public void GetBackCarregarJogo(){
-        pageLoadLevel.SetActive(false);
-        pageLoad.SetActive(true);
+        if(!player.caso3)pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
     }
 }

@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public bool caso1 = true;
     public bool caso2 = false;
     public bool caso3 = false;
-    public string name = null;
+    public string nome = null;
     
     public GameObject but;
 
@@ -22,15 +22,23 @@ public class Player : MonoBehaviour
 
 
     public void SavePlayer(Text n){
-        name = n.text;
+        nome = n.text;
+        caso1 = true;
+        caso2 = false;
+        caso3 = false;
         SaveSystem.SavePlayer(this);
-        FindObjectOfType<GameController>().LoadGameDoScene(1);
+        FindObjectOfType<GameController>().LoadGameDoScene(0);
+    }
+
+    public void SalvarProg()
+    {
+        SaveSystem.UpdatePlayer(this);
     }
 
     public void LoadPlayers(GameObject content){
         PlayerData[] data = SaveSystem.LoadPlayers();
         GameObject n;
-        int multi = 30;
+        int multi = (Screen.height / 9);
         int cont = 0;
         foreach (PlayerData pla in data)
         {
@@ -52,7 +60,7 @@ public class Player : MonoBehaviour
         caso1 = pla.caso1;
         caso2 = pla.caso2;
         caso3 = pla.caso3;
-        name = n;
+        nome = n;
         FindObjectOfType<GameController>().SetSelecionarNivel(pla);
     }
 }
