@@ -997,7 +997,7 @@ MonoBehaviour:
   caso1: 1
   caso2: 0
   caso3: 0
-  name: 
+  nome: 
   but: {fileID: 2542604450231450900, guid: 49fc6a6274cb46b42ab77273df0d52ff, type: 3}
 --- !u!4 &889225842
 Transform:
@@ -1025,6 +1025,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23d53c0e11db7b4cb77cc6021639a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  telaVitoria: {fileID: 0}
+  telaDerrota: {fileID: 0}
 --- !u!224 &889392300 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2542604450231450923, guid: 49fc6a6274cb46b42ab77273df0d52ff,
@@ -1403,6 +1405,11 @@ PrefabInstance:
     - target: {fileID: 2542604450231450922, guid: 49fc6a6274cb46b42ab77273df0d52ff,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542604450231450922, guid: 49fc6a6274cb46b42ab77273df0d52ff,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2542604450231450923, guid: 49fc6a6274cb46b42ab77273df0d52ff,

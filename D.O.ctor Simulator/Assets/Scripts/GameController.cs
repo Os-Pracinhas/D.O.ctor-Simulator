@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public GameObject pageLoadLevel;
     public GameObject pageOptions;
 
+    public Caso caso;
 
     void Start()
     {
@@ -38,10 +39,15 @@ public class GameController : MonoBehaviour
         OpenWindowNameDr.SetActive(false);
     }
 
-    public void LoadGameDoScene(int i){
-        numCaso = i;
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<NCaso>().SaveCaso();
+    public void LoadGameDoScene(int numCaso){
         SceneManager.LoadScene("Scene_GameDO");
+        NCaso casos = new NCaso();
+        caso = casos.LoadCaso()[numCaso];
+    }
+
+    public void LoadSceneNivel()
+    {
+        SceneManager.LoadScene("Scene_Home");
     }
 
     public void GetMed(GameObject content)
@@ -50,7 +56,6 @@ public class GameController : MonoBehaviour
         pageLoad.SetActive(true);
 
         FindObjectOfType<Player>().LoadPlayers(content);
-        Debug.Log(FindObjectOfType<Player>().name);
     }
 
     public void VoltarHome()
@@ -69,14 +74,14 @@ public class GameController : MonoBehaviour
         Application.Quit();
     }
 
-    public void SetSelecionarNivel(PlayerData pla){
+    public void SetSelecionarNivel(PlayerData player){
         pageLoadLevel.SetActive(true);
         pageLoad.SetActive(false);
-        if(!pla.caso2){
+        if(!player.caso2){
             pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(1).gameObject.SetActive(false);
             pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
         }
-        if(!pla.caso3)pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
+        if(!player.caso3)pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
     }
 
     public void GetBackCarregarJogo(){

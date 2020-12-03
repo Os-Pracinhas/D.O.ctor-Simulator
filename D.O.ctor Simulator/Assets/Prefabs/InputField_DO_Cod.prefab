@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 7849982035316862399}
   - component: {fileID: 7849982035316862403}
   - component: {fileID: 7849982035316862400}
+  - component: {fileID: 611952725}
   m_Layer: 5
   m_Name: InputField_DO_Cod
   m_TagString: Untagged
@@ -338,3 +339,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01283e83c15130444baa831a76123af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &611952725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849982035316862397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5530bb248353f6847bd5c045c9bab79f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  csv: {fileID: 4900000, guid: 02c366a9166a37a47be6141ed20b5c9f, type: 3}
+  cod: {fileID: 7849982035316862399}
+  nome: {fileID: 0}

@@ -10,7 +10,7 @@ public static class SaveSystem
 
         DirectoryInfo d = new DirectoryInfo(Application.persistentDataPath);
         string count = null;
-        if(d.GetFiles().Length == 0)count = null;
+        if(d.GetFiles().Length == 0) count = "0";
         else if(d.GetFiles().Length > 0) count = (d.GetFiles().Length).ToString();
 
         BinaryFormatter formatter = new BinaryFormatter();
@@ -35,10 +35,8 @@ public static class SaveSystem
             
             for (int i = 0; i < files_tam; i++)
             {
-                if(i == 0) path = Application.persistentDataPath+"/player.fun";
-                else path = Application.persistentDataPath+"/player"+i+".fun";
+                path = Application.persistentDataPath+"/player"+(i)+".fun";
                 FileStream stream = new FileStream(path, FileMode.Open);
-
                 data[i] = formatter.Deserialize(stream) as PlayerData;
                 stream.Close();
             }
@@ -60,11 +58,9 @@ public static class SaveSystem
         string path;
         BinaryFormatter formatter = new BinaryFormatter();
         PlayerData data;
-
         for (int i = 0; i < files_tam; i++)
         {
-            if(i == 0) path = Application.persistentDataPath+"/player.fun";
-            else path = Application.persistentDataPath+"/player"+i+".fun";
+            path = Application.persistentDataPath+"/player"+i+".fun";
             FileStream stream = new FileStream(path, FileMode.Open);
 
             data = formatter.Deserialize(stream) as PlayerData;
