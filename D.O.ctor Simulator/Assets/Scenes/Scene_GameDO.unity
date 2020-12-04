@@ -511,7 +511,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: InputField_DO_Cod_A
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7849982035316862400, guid: 3a1a07b055b4edd4cb705b94430912bb, type: 3}
+    - {fileID: 7849982035316862403, guid: 3a1a07b055b4edd4cb705b94430912bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3a1a07b055b4edd4cb705b94430912bb, type: 3}
 --- !u!224 &103990936 stripped
 RectTransform:
@@ -9150,7 +9152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1509061406
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10527,7 +10529,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: InputField_DO_Cod_B
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7849982035316862400, guid: 3a1a07b055b4edd4cb705b94430912bb, type: 3}
+    - {fileID: 7849982035316862403, guid: 3a1a07b055b4edd4cb705b94430912bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3a1a07b055b4edd4cb705b94430912bb, type: 3}
 --- !u!1 &1687751596
 GameObject:
@@ -10564,7 +10568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -62.79, y: -46.31}
+  m_AnchoredPosition: {x: -62.79004, y: -46.31006}
   m_SizeDelta: {x: 70.34891, y: 49.244232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1687751598

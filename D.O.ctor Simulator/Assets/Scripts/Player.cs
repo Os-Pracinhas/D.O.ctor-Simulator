@@ -23,8 +23,11 @@ public class Player : MonoBehaviour
 
     public void SavePlayer(Text n){
         nome = n.text;
+        caso1 = true;
+        caso2 = false;
+        caso3 = false;
         SaveSystem.SavePlayer(this);
-        FindObjectOfType<GameController>().LoadGameDoScene(1);
+        FindObjectOfType<GameController>().LoadGameDoScene(0);
     }
 
     public void SalvarProg()

@@ -27,12 +27,18 @@ public class WithoutGameController : MonoBehaviour
 
     public void LoadNiveisPlayer()
     {
-        PlayerData pla = new PlayerData(FindObjectOfType<Player>());
-        FindObjectOfType<GameController>().SetSelecionarNivel(pla);
-    }
+        Player player = FindObjectOfType<Player>();
+        // FindObjectOfType<GameController>().SetSelecionarNivel(pla);
 
-    public void ExitGame()
-    {
-        Application.Quit();
+        sce = SceneManager.GetActiveScene();
+        GameObject pageLoadLevel = (sce.GetRootGameObjects() as GameObject[])[2].gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
+        Debug.Log(player);
+        pageLoadLevel.SetActive(true);
+        (sce.GetRootGameObjects() as GameObject[])[2].gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        if(!player.caso2){
+            pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(1).gameObject.SetActive(false);
+            pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
+        }
+        if(!player.caso3)pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
     }
 }
