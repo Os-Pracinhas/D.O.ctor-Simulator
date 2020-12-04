@@ -24,6 +24,15 @@ public class WithoutGameController : MonoBehaviour
     public void SavePlayer(Text n){
         FindObjectOfType<Player>().SavePlayer(n);
     }
+    
+    public void LoadSceneHome()
+    {
+        SceneManager.LoadScene("Scene_Home");
+    }
+    public void LoadSceneTutorial()
+    {
+        SceneManager.LoadScene("Scene_Tutorial");
+    }
 
     public void LoadNiveisPlayer()
     {

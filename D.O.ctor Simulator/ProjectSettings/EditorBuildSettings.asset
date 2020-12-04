@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene_PosGameDO.unity
     guid: 1cfd84b6f2bc99840a7ec73cfb7f3173
+  - enabled: 1
+    path: Assets/Scenes/Scene_Tutorial.unity
+    guid: 5b79bd1e6e63b734faf4795015c2470f
   m_configObjects: {}

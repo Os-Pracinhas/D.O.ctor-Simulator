@@ -1455,6 +1455,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2793128992656760668, guid: edbd51303fc020347a7884787ac33858,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 647916721}
+    - target: {fileID: 2793128992656760668, guid: edbd51303fc020347a7884787ac33858,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadDoScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793128993352418950, guid: edbd51303fc020347a7884787ac33858,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 647916721}
+    - target: {fileID: 2793128993352418950, guid: edbd51303fc020347a7884787ac33858,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadDoScene
+      objectReference: {fileID: 0}
     - target: {fileID: 2793128993372230257, guid: edbd51303fc020347a7884787ac33858,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1535,6 +1555,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8c669bc1ee9e3994f84f20687724deb6,
         type: 3}
+    - target: {fileID: 2793128993380721379, guid: edbd51303fc020347a7884787ac33858,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 647916721}
+    - target: {fileID: 2793128993380721379, guid: edbd51303fc020347a7884787ac33858,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadDoScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edbd51303fc020347a7884787ac33858, type: 3}
 --- !u!224 &2058083032 stripped
