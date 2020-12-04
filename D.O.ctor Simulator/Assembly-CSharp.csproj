@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\SetNameByCod.cs" />
      <Compile Include="Assets\Scripts\SetRelato.cs" />
      <Compile Include="Assets\Scripts\Validate.cs" />
+     <Compile Include="Assets\Scripts\WithoutGameController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/2019.4.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

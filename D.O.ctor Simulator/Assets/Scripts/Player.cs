@@ -50,10 +50,6 @@ public class Player : MonoBehaviour
 
     public void SearchPlayer(string n){
         PlayerData pla = SaveSystem.Search(n);
-        // for (int i = 0; i < fases.Length; i++)
-        // {
-        //     fases[i] = pla.fases[i];
-        // }
         caso1 = pla.caso1;
         caso2 = pla.caso2;
         caso3 = pla.caso3;

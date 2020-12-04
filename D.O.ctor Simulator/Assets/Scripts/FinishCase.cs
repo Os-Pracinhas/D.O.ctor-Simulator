@@ -5,6 +5,23 @@ using UnityEngine.UI;
 
 public class FinishCase : MonoBehaviour
 {
+    // GameController gC;
+    // Player player;
+    // // Start is called before the first frame update
+    // void Start()
+    // {
+    //     gC = FindObjectOfType<GameController>();
+    //     player = FindObjectOfType<Player>();
+    // }
+
+    // public void SceneSelectedNivel()
+    // {
+    //     if(gC.numCaso == 0) player.caso2 = true;
+    //     else if(gC.numCaso == 1)player.caso3 = true;
+    //     player.SalvarProg();
+    //     gC.LoadScenePosGaeDO();
+    // }
+ 
     GameController gC;
     Player player;
     // Start is called before the first frame update
@@ -19,6 +36,10 @@ public class FinishCase : MonoBehaviour
         if(gC.numCaso == 0) player.caso2 = true;
         else if(gC.numCaso == 1)player.caso3 = true;
         player.SalvarProg();
+        gC.LoadScenePosGaeDO();
+    }
+
+    public void SceneGoWrong(){
         gC.LoadScenePosGaeDO();
     }
 

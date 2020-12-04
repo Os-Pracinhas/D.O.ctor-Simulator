@@ -6,15 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    Scene sce;
     public static GameController instance = null;
-    public GameObject OpenWindowNameDr;
-    private string sceneName;
     public int numCaso;
 
-    public GameObject pageHome;
     public GameObject pageLoad;
     public GameObject pageLoadLevel;
-    public GameObject pageOptions;
 
     public Caso caso;
 
@@ -23,15 +20,6 @@ public class GameController : MonoBehaviour
         if (instance == null) { instance = this; }
         else if (instance != this) { Destroy(gameObject); }
         DontDestroyOnLoad(gameObject);
-    }
-
-    void Update(){
-        
-    }
-
-    public void SetNewMed()
-    {
-        OpenWindowNameDr.SetActive(true);
     }
 
     public void LoadGameDoScene(int numCaso){
@@ -49,39 +37,17 @@ public class GameController : MonoBehaviour
     public void LoadSceneHome()
     {
         SceneManager.LoadScene("Scene_Home");
-        
-    }
-
-    public void GetMed(GameObject content)
-    {
-        pageHome.SetActive(false);
-        pageLoad.SetActive(true);
-
-        FindObjectOfType<Player>().LoadPlayers(content);
-    }
-    public void VoltarLoad()
-    {
-        pageLoadLevel.SetActive(false);
-        pageLoad.SetActive(true);
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
     }
 
     public void SetSelecionarNivel(PlayerData player){
+        sce = SceneManager.GetActiveScene();
+        GameObject pageLoadLevel = (sce.GetRootGameObjects() as GameObject[])[2].gameObject.transform.GetChild(1).gameObject.transform.GetChild(2).gameObject;
         pageLoadLevel.SetActive(true);
-        pageLoad.SetActive(false);
+        (sce.GetRootGameObjects() as GameObject[])[2].gameObject.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject.SetActive(false);
         if(!player.caso2){
             pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(1).gameObject.SetActive(false);
             pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
         }
         if(!player.caso3)pageLoadLevel.transform.GetChild(2).gameObject.transform.GetChild(2).gameObject.SetActive(false);
-    }
-
-    public void GetBackCarregarJogo(){
-        pageLoadLevel.SetActive(false);
-        pageLoad.SetActive(true);
     }
 }
